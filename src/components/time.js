@@ -12,15 +12,7 @@ class DClock extends React.Component {
         { name: 'Item 3', value: 30 },
         { name: 'Item 4', value: 40 },
       ],
-      time: new Date()
     };
-  }
-  componentDidMount() {
-    this.intervalID = setInterval(() => this.tick(), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.intervalID);
   }
   render() {
     const { data } = this.state;
@@ -34,14 +26,14 @@ class DClock extends React.Component {
 
         </Col>
         <Col sm={12} xs={24} className={styles.cellCont}>
-          <Carousel width={400} height={300} autoplay={true} autoplaySpeed={3000} loop={true}>
+          {/* <Carousel width={400} height={300} autoplay={true} autoplaySpeed={3000} loop={true}>
             {data.map((item, index) => (
               <div key={index}>
                 <p>{item.name}</p>
                 <p>{item.value}</p>
               </div>
             ))}
-          </Carousel>
+          </Carousel> */}
         </Col>
       </Row>
     );

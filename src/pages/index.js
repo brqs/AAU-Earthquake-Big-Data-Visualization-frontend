@@ -3,10 +3,11 @@ import { Row,Col} from 'antd';
 import Rank from '@/components/rank';
 import DeviceMap from '@/components/deviceMap';
 import Payment from '@/components/payment';
-import  DClock from '@/components/time';
 import styles from './index.css';
 import Yearstack from '@/components/yearbar';
 import DistributPie from '@/components/ddistributpie';
+import Lunbo from '@/components/lunbo';
+import Mapld from '@/components/map';
 class ViewContent extends PureComponent{
   render(){
     return(
@@ -37,17 +38,16 @@ class ViewContent extends PureComponent{
           {/* 中部组件 */}
           <Col lg={10} md={12} sm={24} xs={24} className={styles.middle}>
             <div className={styles.section}>
-              <DClock />
+              <Lunbo />
             </div>
             <div className={styles.section}>
               <div className={styles.border+' '+ styles.mapCont}>
                 <div className={styles.bg+' '+ styles.bgLeftTop}></div>
                 <div className={styles.bg+' '+ styles.bgRightTop}></div>
                 <div className={styles.bg+' '+ styles.bgLeftBottom}></div>
-                <div className={styles.bg+' '+ styles.bgRightBottom}></div>
-                <OnlineMachine />                
+                <div className={styles.bg+' '+ styles.bgRightBottom}></div>            
                 <div className={styles.mapChart}>
-                  <DeviceMap />
+                  <Mapld />
                 </div>
               </div>
             </div>
